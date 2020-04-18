@@ -2,18 +2,20 @@ Preload = function(game){}
 
 Preload.prototype = {
 	preload : function(){
-		
-		this.load.image("actionButton","assets/images/actionButton.png");
-		this.load.image("arrowButton","assets/images/arrowButton.png");
-		this.load.image("barrel","assets/images/barrel.png");
-		this.load.spritesheet("fire_spritesheet","assets/images/fire_spritesheet.png",20, 21, 2,1,1);
-		this.load.image("gorilla3","assets/images/gorilla3.png");
-		this.load.image("ground","assets/images/ground.png");
-		this.load.image("platform","assets/images/platform.png");
-		this.load.spritesheet("player_spritesheet","assets/images/player_spritesheet.png",28,30,5,1,1);    
-		this.load.text("level","assets/data/level.json");
+		this.game.scale.pageAlignHorizontally = true;
+		this.game.scale.pageAlignVertically = true;
+		this.load.image("bgLayer1","assets/images/bgLayer1.png");
+		this.load.image("bgWelcome","assets/images/bgWelcome.jpg");
+		this.load.image("loading-bar","assets/images/loading-bar.png");
+		this.load.spritesheet("candy","assets/images/candy.png", 81, 97);
+		this.load.image("gameover","assets/images/gameover.png");
+		this.load.image("welcome_aboutButton","assets/images/welcome_aboutButton.png");
+		this.load.image("welcome_hero","assets/images/welcome_hero.png");
+		this.load.spritesheet("hero","assets/images/hero.png",156,76);    
+		this.load.image("welcome_playButton","assets/images/welcome_playButton.png");
+		this.load.image("welcome_title","assets/images/welcome_title.png");
 	},
 	create:function(){
-		this.state.start("Game");
+		this.state.start("Menu");
 	}
 }
